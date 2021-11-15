@@ -1,0 +1,42 @@
+package boletin9_1;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+/**
+ *
+ * @author dam1
+ */
+public class Boletin9_1 {
+
+    public static void main(String[] args) throws IOException {
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int p = 0;
+        int n = 0;
+        int c = 0;
+        int num;
+        for (int i = 0; i <= 10; i++) {
+            System.out.println("Introduce un número: ");
+            num = Integer.parseInt(br.readLine());
+            if (num < 0) {
+                n++;
+
+            } else {
+                if (num == 0) {
+                    c++;
+
+                } else {
+                    p++;
+
+                }
+
+            }
+        }
+        System.out.println("Negativos: " + n);
+        System.out.println("Iguales a 0: " + c);
+        System.out.println("Positivos: " + p);
+    }
+
+}
